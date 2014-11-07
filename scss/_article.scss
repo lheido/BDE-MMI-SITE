@@ -1,0 +1,115 @@
+@import "colors";
+@import "dimens";
+@import "bourbon/bourbon";
+
+.article {
+    @include flex(1);
+    color: $article-text-color;
+    padding: 10px;
+    @media (max-width: $smart-screen){
+        padding: 0;
+    }
+    h3 {
+        margin: 0px;
+        padding: 10px;
+        color: $article-title-color;
+        background-color: $article-title-bg-color;
+        text-align: center;
+    }
+    .wrap-article-content {
+        @include display(flex);
+        @include flex-wrap(wrap);
+        @include align-items(stretch);
+        @media (max-width: $smart-screen){
+            @include flex-direction(column);
+        }
+        .article-meta {
+            @include flex(1);
+            @include display(flex);
+            @include flex-wrap(wrap);
+            @include align-items(stretch);
+            @include flex-direction(column);
+            @media (max-width: $smart-screen){
+                @include flex-direction(row);
+            }
+            // @media (max-width: $smartphone){
+            //     @include flex-direction(column);
+            // }
+            div {
+                color: $article-meta-color;
+                text-align: center;
+                @include flex(1);
+                margin: 10px;
+                position: relative;
+                @media (max-width: $smartphone){
+                    margin-bottom: 10px;
+                }
+            }
+            // .article-like {
+            //     @include flex(initial);
+            //     &::after{
+            //         content: "";
+            //         position: absolute;
+            //         bottom: -10px;
+            //         left: 2.5%;
+            //         width: 95%;
+            //         height: 1px;
+            //         background-color: $article-border;
+            //         @media (max-width: $smart-screen){
+            //             height: 0px;
+            //         }
+            //     }
+            // }
+            .article-date {
+                color: $article-date-color;
+                text-align: center;
+                @media (max-width: $smart-screen){
+                    text-align: right;
+                }
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     width: 0px;
+                //     background-color: $article-border;
+                //     @media (max-width: $smart-screen){
+                //         height: 95%;
+                //         width: 1px;
+                //         left: -10px;
+                //     }
+                //     // @media (max-width: $smartphone){
+                //     //     width: 0px;
+                //     // }
+                // }
+            }
+        }
+        .wrap-description {
+            @include flex(2);
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: -1%;
+                left: 0px;
+                width: 1px;
+                height: 102%;
+                background-color: $article-border;
+                @media (max-width: $smart-screen){
+                    width: 100%;
+                    height: 1px;
+                    top: -5px;
+                    left: 0%;
+                }
+                @media (max-width: $smartphone){
+                    top: 0px;
+                    height: 0px;
+                }
+            }
+            .description {
+                margin: 10px;
+                text-align: justify;
+                position: relative;
+
+            }
+        }
+    }
+}

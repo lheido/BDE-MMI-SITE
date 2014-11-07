@@ -1,0 +1,27 @@
+.article {
+  flex: 1; }
+  .article h3 {
+    margin: 10px;
+    padding: 0px; }
+  .article .wrap-article-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 10px; }
+    .article .wrap-article-content .article-meta {
+      background-color: #c8c8c8;
+      flex: 1;
+      align-items: stretch; }
+      .article .wrap-article-content .article-meta div {
+        background-color: white;
+        margin: 5px;
+        text-align: center;
+        flex: 1; }
+    .article .wrap-article-content .wrap-description {
+      background-color: white;
+      flex: 2; }
+      .article .wrap-article-content .wrap-description .description {
+        margin: 10px;
+        text-align: justify; }
+
+/*# sourceMappingURL=article.css.map */

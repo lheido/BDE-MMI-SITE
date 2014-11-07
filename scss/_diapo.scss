@@ -1,0 +1,41 @@
+@import "dimens";
+@import "colors";
+
+#wrap-skew{
+    margin-top: -1px;
+    @include transform(skewY(4deg));
+    background-color: $diapo-bg-color;
+    @include calc(height, "100vh");
+    padding-top: 100px;
+    padding-bottom: $title-height*2;
+    @media (max-width: $smartphone){
+        @include calc(height, "100vh - $navigation-height*2 - 2px");
+    }
+    #wrap-diapo{
+        height: inherit;
+        @include transform(skewY(-4deg));
+        @media (max-width: $smartphone){
+            padding-top: $navigation-height*2;
+        }
+        .swipe {
+            overflow: hidden;
+            visibility: hidden;
+            position: relative;
+            height: 100%;
+            .swipe-wrap {
+                overflow: hidden;
+                position: relative;
+                div{
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    float: left;
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

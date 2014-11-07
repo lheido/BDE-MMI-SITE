@@ -1,0 +1,44 @@
+#actu {}
+    #actu .articles-wrap {
+        background-color: red;
+        margin-right: 2%;
+        padding: 5%;
+    }
+        #actu .articles-wrap h1{
+            text-align: right;
+        }
+    #actu .first {
+        border-left: 1px solid black;
+    }
+#event {}
+    #event .articles-wrap {
+        background-color: green;
+        margin-left: 2%;
+        padding: 5%;
+    }
+        #event .articles-wrap h1 {
+            text-align: left;
+        }
+    #event .first {
+        border-right: 1px solid black;
+    }
+#team {
+    background-color: grey;
+}
+    #team h1 {
+        text-align: center;
+    }
+
+.description {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.content-wrapper h3, .content-wrapper .article-meta div {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#main {
+    overflow-x: hidden;
+}

@@ -1,0 +1,48 @@
+@import "colors";
+@import "dimens";
+@import "bourbon/bourbon";
+
+header {
+    position: fixed;
+    top: - ($navigation-height*2);
+    width: 100%;
+    z-index: 10;
+    @include transform(skewY(4deg));
+    @media (max-width: $smartphone){
+        @include transform(none);
+        top: 0;
+    }
+    nav {
+        position: relative;
+        top: 20px;
+        padding-top: 42px;
+        @media (max-width: $smartphone){
+            overflow-x: scroll;
+            padding-top: 0;
+            top: 0;
+        }
+        box-shadow: 0 0 4px rgba($nav-bs-color, 0.0);
+        background-color: rgba($nav-bar-color, 0.0);
+        @include transition(background-color 0.3s linear, box-shadow 0.3s linear);
+        @include display(flex);
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+        @include justify-content(flex-end);
+
+        a {
+            height: $navigation-height;
+            line-height: $navigation-height;
+            color: $nav-items-color;
+            padding: 20px;
+            margin-right: 10px;
+            display: block;
+            position: relative;
+        }
+    }
+}
+
+.nav-bar-colored {
+    background-color: $nav-bar-color;
+    box-shadow: 0 0 4px $nav-bs-color;
+    @include transition(background-color 0.3s linear, box-shadow 0.3s linear);
+}
