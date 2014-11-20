@@ -170,5 +170,33 @@ a, a:link, a:visited {
     #team {
         @include transform(skewY(-4deg));
         // margin-top: $navigation-height*2 - 2px;
+        padding: 50px 10px;
+        text-align: center;
+        @media (max-width: $smart-screen){
+            padding: 50px 7px;
+            text-align: center;
+        }
+
+        .membre{
+            width: 150px;
+            display: inline-block;
+            margin: 50px 20px;
+            @media (max-width: $smart-screen){
+                margin: 50px 10px;
+                width: 120px;
+            }
+            img {
+                max-width: 150px;
+                @media (max-width: $smart-screen){
+                    max-width: 120px;
+                }
+            }
+
+            p {
+                margin: 0px;
+            }
+        }
+
     }
+
 }
