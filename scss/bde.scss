@@ -170,7 +170,7 @@ a, a:link, a:visited {
     #team {
         @include transform(skewY(-4deg));
         // margin-top: $navigation-height*2 - 2px;
-        padding: 50px 10px;
+        padding: 50px 50px;
         text-align: center;
         @media (max-width: $smart-screen){
             padding: 50px 7px;
