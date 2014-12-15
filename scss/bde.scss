@@ -184,6 +184,7 @@ a, a:link, a:visited {
             width: 150px;
             display: inline-block;
             margin: 50px 20px;
+            vertical-align: top;
             @media (max-width: $smart-screen){
                 margin: 50px 10px;
                 width: 120px;
