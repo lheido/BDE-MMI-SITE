@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
         }else{
             $("nav").addClass("nav-bar-colored");
         }
-        if($("#diapo").offset().top > nav.offset().top){
+        if($("#wrap-diapo").offset().top > nav.offset().top && $(document).width() >= 1024){
             $("footer").css("display", "none");
         }else{
             $("footer").css("display", "block");
@@ -47,7 +47,7 @@ jQuery(document).ready(function($){
         if(target != "#contact"){
             $('html, body').animate( { scrollTop: $(target).offset().top }, scroll_speed );
         }else{
-            if($(document).width() < 1024){
+            if($(document).width() <= 1024){
                 $('html, body').animate( { scrollTop: $("footer").offset().top }, scroll_speed );
             }else{
                 $('html, body').animate( { scrollTop: $(document).height() }, scroll_speed );
