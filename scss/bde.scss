@@ -10,6 +10,8 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+
 }
 
 a, a:link, a:visited {
@@ -95,7 +97,7 @@ a, a:link, a:visited {
     background-color: $article-bg-color;
 
     #wrap-home {
-        @include calc(min-height, "100vh");
+        @include calc(min-height, "100%");
         padding-top: 70px;
         @include transform(skewY(-4deg));
         @include display(flex);
@@ -164,9 +166,9 @@ a, a:link, a:visited {
     // padding-top: $navigation-height*2 - 2px;
     @include transform(skewY(4deg));
     z-index: 5;
-    @include calc(min-height, "100vh");
+    @include calc(min-height, "100%");
     background-color: rgba(white, 1.0);
-    @include calc(margin-bottom, "100vh");
+    @include calc(margin-bottom, "100%");
     @media (max-width: $smartphone){
         margin-bottom: 0px;
     }
@@ -200,7 +202,8 @@ a, a:link, a:visited {
                 margin: 0px;
             }
             .status {
-                opacity: 0.8;
+                opacity: 0.7;
+                font-size: 0.9em;
             }
         }
 

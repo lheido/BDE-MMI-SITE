@@ -3,7 +3,7 @@ footer {
     bottom: 0;
     display: none;
     z-index: -1;
-    @include calc(min-height, "100vh");
+    @include calc(min-height, "100%");
     width: 100%;
     background-color: $footer-bg-color;
     @media (max-width: $smart-screen){
