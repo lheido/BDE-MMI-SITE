@@ -9,7 +9,7 @@ footer {
     @media (max-width: $smart-screen){
         position: relative;
         z-index: -1;
-        @include transform(skewY(4deg));
+        margin-top: -42px;
     }
 
     #contact {
@@ -22,7 +22,6 @@ footer {
             @include flex-direction(column);
         }
         @media (max-width: $smartphone){
-            @include transform(skewY(-4deg));
             margin-top: 0px;
             padding-top: $navigation-height*2 - 2px;
         }
@@ -48,7 +47,7 @@ footer {
                     }
                 }
                 img {
-                    width: 200px;
+                    width: 150px;
                 }
             }
         }
