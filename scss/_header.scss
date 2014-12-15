@@ -37,6 +37,22 @@ header {
             margin-right: 10px;
             display: block;
             position: relative;
+            img {
+                margin: 0;
+                padding: 0;
+                height: inherit;
+                display: inline;
+                @media (min-width: $smartphone){
+                    position: relative;
+                    top: 15px;
+                    left: -5px;
+                }
+            }
+            span {
+                @media (max-width: $smartphone){
+                    display: none;
+                }
+            }
         }
     }
 }
