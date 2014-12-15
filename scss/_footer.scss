@@ -31,13 +31,16 @@ footer {
             @include flex(1);
             @include display(flex);
             @include flex-wrap(wrap);
-            @media (max-width: $smartphone){
+            @media (max-width: $tablette){
                 // @include flex-direction(column);
             }
             div {
                 @include flex(1 200px);
                 text-align: center;
                 margin: 42px;
+                @media (max-width: $tablette){
+                    @include flex(1 100%);
+                }
                 &:last-child {
                     @include flex(1 100%);
                     img {
@@ -49,9 +52,7 @@ footer {
                 }
             }
         }
-        #contact_form {
-            @include flex(1);
-        }
+
         #bde_info {
             @include flex(1 100%);
             margin: 42px;

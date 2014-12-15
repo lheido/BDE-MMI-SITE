@@ -54,6 +54,9 @@ a, a:link, a:visited {
     height: $logo-height;
     background: url("../img/logo-bde.svg") no-repeat center top;
     background-size: contain;
+    @media (max-width: $smartphone){
+        top: 100px;
+    }
 }
 
 #go_articles { // arrow

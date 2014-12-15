@@ -29,21 +29,16 @@ jQuery(document).ready(function($){
 
 	$(window).scroll(function(e){
         main.offset({top: main_offset_top});
-        if(main.offset().top > nav.offset().top + 84){
-            $("header").removeClass("nav-bar-colored");
-            // $("footer").css("display", "none");
+        if(main.offset().top > nav.offset().top + 100){
+            $("nav").removeClass("nav-bar-colored");
         }else{
-            $("header").addClass("nav-bar-colored");
-            // $("footer").css("display", "block");
+            $("nav").addClass("nav-bar-colored");
         }
         if($("#diapo").offset().top > nav.offset().top){
             $("footer").css("display", "none");
         }else{
             $("footer").css("display", "block");
         }
-        // if(!home_appear_first_time && ($("#actu .article h3").offset().top - main.offset().top) < nav.offset().top){
-        //     home_appear_first_time = true;
-        // }
     });
 
     $("nav a").click(function(e){
