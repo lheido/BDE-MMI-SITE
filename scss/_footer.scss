@@ -38,7 +38,7 @@ footer {
                 @include flex(1 200px);
                 text-align: center;
                 margin: 42px;
-                @media (max-width: $tablette){
+                @media (max-width: $smart-screen){
                     @include flex(1 100%);
                 }
                 &:last-child {
