@@ -11,10 +11,14 @@ jQuery(document).ready(function($){
         nav_h = nav.height();
     var main_offset_top = parseInt(main.offset().top);
 
-    console.log(
-        $("nav").width()+", "+
-        ($("nav a[href='#main']").width()+$("nav a[href='#wrap-diapo']").width()+$("nav a[href='#team']").width()+$("nav a[href='#contact']").width())
-    );
+    if($(document).width() <= 1024){
+        $("nav").addClass("nav-bar-colored");
+    }
+
+    // console.log(
+    //     $("nav").width()+", "+
+    //     ($("nav a[href='#main']").width()+$("nav a[href='#wrap-diapo']").width()+$("nav a[href='#team']").width()+$("nav a[href='#contact']").width())
+    // );
 
     window.mySwipe = new Swipe(document.querySelector("#diapo"), {
         startSlide: 0,
@@ -29,7 +33,7 @@ jQuery(document).ready(function($){
 
 	$(window).scroll(function(e){
         main.offset({top: main_offset_top});
-        if(main.offset().top > nav.offset().top + 100){
+        if(main.offset().top > nav.offset().top + 100 && $(document).width() >= 1024){
             $("nav").removeClass("nav-bar-colored");
         }else{
             $("nav").addClass("nav-bar-colored");
