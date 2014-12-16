@@ -16,37 +16,43 @@ header {
         position: relative;
         top: 20px;
         padding-top: 42px;
-        @media (max-width: $smartphone){
-            overflow-x: scroll;
-            padding-top: 0;
-            top: 0;
-        }
         box-shadow: 0 0 4px rgba($nav-bs-color, 0.0);
         background-color: rgba($nav-bar-color, 0.0);
         @include transition(background-color 0.3s linear, box-shadow 0.3s linear);
-        @include display(flex);
-        @include flex-wrap(nowrap);
-        @include align-items(stretch);
-        @include justify-content(flex-end);
+        text-align: right;
+        // @include display(flex);
+        // @include flex-wrap(nowrap);
+        // @include align-items(stretch);
+        // @include justify-content(flex-end);
 
+        @media (max-width: $smartphone){
+            padding-top: 0;
+            top: 0;
+        }
         a {
             height: $navigation-height;
             line-height: $navigation-height;
             color: $nav-items-color;
             padding: 20px;
             margin-right: 10px;
-            display: block;
+            display: inline-block;
             position: relative;
+            @media (max-width: $smartphone){
+                padding: 3%;
+            }
             img {
                 margin: 0;
                 padding: 0;
                 height: inherit;
                 display: inline;
-                @media (min-width: $smartphone){
-                    position: relative;
-                    top: 15px;
-                    left: -5px;
+                position: relative;
+                top: 15px;
+                left: -5px;
+                @media (max-width: $smartphone){
+                    top: 0px;
+                    left: 0px;
                 }
+
             }
             span {
                 @media (max-width: $smartphone){

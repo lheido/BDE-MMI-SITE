@@ -14,47 +14,30 @@ footer {
 
     #contact {
         margin-top: $navigation-height*2 - 2px;
-        @include display(flex);
-        @include align-items(center);
-        @include flex-wrap(wrap);
-        @include flex-direction(row);
-        @media (max-width: $tablette){
-            @include flex-direction(column);
-        }
         @media (max-width: $smartphone){
             margin-top: 0px;
             padding-top: $navigation-height*2 - 2px;
         }
-
+        text-align: center;
         #social {
-            @include flex(1);
-            @include display(flex);
-            @include flex-wrap(wrap);
-            @media (max-width: $tablette){
-                // @include flex-direction(column);
-            }
             div {
-                @include flex(1 200px);
+                display: inline-block;
                 text-align: center;
-                margin: 22px;
-                @media (max-width: $smart-screen){
-                    @include flex(1 100%);
-                }
+                margin: 5%;
                 &:last-child {
-                    @include flex(1 100%);
                     img {
-                        width: 300px;
+                        max-width: 250px;
                     }
                 }
                 img {
-                    width: 120px;
+                    max-width: 120px;
                 }
             }
         }
 
         #bde_info {
-            @include flex(1 100%);
             margin: 42px;
+            margin-bottom: 0px;
             text-align: center;
             color: $bde_info_text_color
         }

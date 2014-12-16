@@ -32,6 +32,7 @@ a, a:link, a:visited {
 }
 
 .wrap-liste-article {
+    background-color: $actu-bg-color;
     .liste-article {
         margin: 20px;
         @include display(flex);
@@ -100,26 +101,23 @@ a, a:link, a:visited {
         @include calc(min-height, "100%");
         padding-top: 70px;
         @include transform(skewY(-4deg));
-        @include display(flex);
-        @include align-items(stretch);
-        @include flex-wrap(wrap);
-        @media (max-width: $tablette){
-            @include flex-direction(column);
-        }
         #actu {
-            @include flex(1);
-            background-color: $actu-bg-color;
-            margin-bottom: $title-height*2;
-            margin-right: 5px;
+            display: inline-block;
+            width: 100%;
+
+            // margin-bottom: $title-height*2;
             @media (max-width: $tablette){
                 margin-right: 0px;
                 margin-bottom: 0px;
             }
             .wrap-title {
-                padding-right: 84px;
-                padding-left: 42px;
-                padding-bottom: 42px;
+                padding-left: 84px;
+                padding-right: 42px;
                 background-color: $title-bg-color;
+                @media (max-width: $smartphone){
+                    padding-left: 0px;
+                    padding-right: 0px;
+                }
                 h1 {
                     font-size: 42px;
                     margin: 0;
@@ -127,24 +125,21 @@ a, a:link, a:visited {
                     height: $title-height;
                     line-height: $title-height;
                     padding: 0;
-                    text-align: right;
+                    text-align: left;
                 }
             }
         }
         #event {
-            @include flex(1);
-            background-color: $event-bg-color;
+            display: inline-block;
+            width: 100%;
             margin-bottom: $title-height*2;
-            margin-left: 5px;
-            @media (max-width: $tablette){
-                margin-left: 0px;
-            }
             .wrap-title {
                 padding-right: 42px;
                 padding-left: 84px;
-                padding-bottom: 42px;
                 @media (max-width: $smartphone){
                     padding-top: 42px;
+                    padding-left: 0px;
+                    padding-right: 0px;
                 }
                 background-color: $title-bg-color;
                 h1 {
