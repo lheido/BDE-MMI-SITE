@@ -11,7 +11,10 @@ body {
     padding: 0;
     height: 100%;
     font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+}
 
+h1, h3 {
+    font-weight: normal;
 }
 
 a, a:link, a:visited {
@@ -35,14 +38,10 @@ a, a:link, a:visited {
     background-color: $actu-bg-color;
     .liste-article {
         margin: 20px;
-        @include display(flex);
-        @include align-items(stretch);
-        @include flex-wrap(nowrap);
+        margin-top: 0px;
+        padding-top: 20px;
         @media (max-width: $smartphone){
-            @include flex-direction(column);
-        }
-        @media (max-width: $smart-screen){
-            @include flex-direction(column);
+            margin: 0;
         }
     }
 }
@@ -176,30 +175,59 @@ a, a:link, a:visited {
             padding: 50px 7px;
             text-align: center;
         }
-
         .membre{
-            width: 150px;
+            width: 300px;
             display: inline-block;
             margin: 50px 20px;
             vertical-align: top;
+            position: relative;
             @media (max-width: $smart-screen){
-                margin: 50px 10px;
-                width: 120px;
+                // margin: 50px 10px;
+                margin: 0px;
+                width: 250px;
             }
             img {
-                max-width: 150px;
-                @media (max-width: $smart-screen){
-                    max-width: 120px;
+                width: 184px;
+                height: 184px;
+                margin: auto;
+                border-radius: 50%;
+                // @media (max-width: $smart-screen){
+                //     max-width: 120px;
+                // }
+            }
+            .membre-bande{
+                position: relative;
+                top: -35px;
+                background-color: rgb(255,255,255);
+                &::after{
+                    content: "";
+                    width: 50%;
+                    height: 50%;
+                    position: absolute;
+                    left: 25%;
+                    top: 50%;
+                    border-radius: 120px/12px;
+                    box-shadow: 0px 0px 10px grey;
+                    z-index: -1;
+                }
+                &::before{
+                    content: "";
+                    width: 58%;
+                    height: 3px;
+                    background-color: $logo-red2;
+                    position: absolute;
+                    left: 21%;
+                    top: -3px;
+                }
+                p {
+                    margin: 0px;
+                }
+                .status {
+                    opacity: 0.65;
+                    font-size: 0.8em;
                 }
             }
 
-            p {
-                margin: 0px;
-            }
-            .status {
-                opacity: 0.7;
-                font-size: 0.9em;
-            }
         }
 
     }
