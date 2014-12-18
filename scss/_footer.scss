@@ -41,25 +41,21 @@ footer {
             text-align: center;
             color: $bde_info_text_color
         }
+
+        #footer-small{
+            width: 100%;
+        }
+
+        #footer-small p{
+            margin: 8px 30px;
+        }
+
+        #footer-small .left{
+            float: left;
+        }
+
+        #footer-small .right{
+            float: right;
+        }
     }
-    #footer-small{
-        width: 100%;
-        background-color: #C23432;
-    }
-
-
-    #footer-small p{
-        margin: 8px 30px;
-    }
-
-
-    #footer-small .left{
-        float: left;
-    }
-
-
-    #footer-small .right{
-        float: right;
-    }
-
 }
