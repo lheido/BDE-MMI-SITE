@@ -36,12 +36,15 @@ a, a:link, a:visited {
 
 .wrap-liste-article {
     background-color: $actu-bg-color;
+    margin-left: 10px;
+    margin-right: 10px;
     .liste-article {
         margin: 20px;
         margin-top: 0px;
         padding-top: 20px;
         @media (max-width: $smartphone){
             margin: 0;
+            padding: 5px;
         }
     }
 }
@@ -114,8 +117,8 @@ a, a:link, a:visited {
                 padding-right: 42px;
                 background-color: $title-bg-color;
                 @media (max-width: $smartphone){
-                    padding-left: 0px;
-                    padding-right: 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
                 h1 {
                     font-size: 42px;
@@ -137,8 +140,8 @@ a, a:link, a:visited {
                 padding-left: 84px;
                 @media (max-width: $smartphone){
                     padding-top: 42px;
-                    padding-left: 0px;
-                    padding-right: 0px;
+                    padding-left: 10px;
+                    padding-right: 10px;
                 }
                 background-color: $title-bg-color;
                 h1 {
