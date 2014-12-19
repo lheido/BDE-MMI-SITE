@@ -29,7 +29,7 @@ a, a:link, a:visited {
 }
 
 .hidden-phone {
-    @media (max-width: 320px){
+    @media (max-width: $smart-screen){
         display: none;
     }
 }
