@@ -44,18 +44,17 @@ footer {
 
         #footer-small{
             width: 100%;
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            font-size: 0.8em;
+            @media (max-width: $smart-screen){
+                position: relative;
+            }
         }
 
         #footer-small p{
-            margin: 8px 30px;
-        }
-
-        #footer-small .left{
-            float: left;
-        }
-
-        #footer-small .right{
-            float: right;
+            padding: 8px 30px;
         }
     }
 }

@@ -29,7 +29,7 @@ a, a:link, a:visited {
 }
 
 .hidden-phone {
-    @media (max-width: $smartphone){
+    @media (max-width: 320px){
         display: none;
     }
 }
@@ -64,7 +64,7 @@ a, a:link, a:visited {
     }
 }
 
-#go_articles { // arrow
+#go_articles {
     position: absolute;
     bottom: 10%;
     left: 80%;

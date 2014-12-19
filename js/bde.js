@@ -1,6 +1,6 @@
 var scroll_speed = 500, // en ms
-    diapo_speed = 400,
-    diapo_auto = 2500,
+    diapo_speed = 1000,
+    diapo_auto = 5000,
     home_appear_first_time = false;
 
 
@@ -20,6 +20,13 @@ jQuery(document).ready(function($){
         speed: diapo_speed,
         auto: diapo_auto,
         continuous: true
+    });
+
+    $("#ctrl-next").click(function(e){
+        window.mySwipe.next();
+    });
+    $("#ctrl-prec").click(function(e){
+        window.mySwipe.prev();
     });
 
     $(window).resize(function(){
